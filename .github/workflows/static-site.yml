@@ -16,3 +16,24 @@ jobs:
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+      - name: Find and deploy site
+        run: |
+          EXPORT_DIR=$(find /tmp -name "export" -path "*__sapper__*" 2>/dev/null | head -1)
+          if [ -z "$EXPORT_DIR" ]; then
+            EXPORT_DIR=$(find . -name "export" -path "*__sapper__*" 2>/dev/null | head -1)
+          fi
+          if [ -n "$EXPORT_DIR" ]; then
+            echo "Found export at: $EXPORT_DIR"
+            ls -la "$EXPORT_DIR"
+            mkdir -p /tmp/site-output
+            cp -r "$EXPORT_DIR"/* /tmp/site-output/
+          else
+            echo "No export directory found"
+            find / -name "index.html" -path "*sapper*" 2>/dev/null | head -5
+            exit 1
+          fi
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          personal_token: ${{ secrets.GH_PAT }}
+          publish_dir: /tmp/site-output
+          cname: status.wakit.ai
