@@ -14,3 +14,8 @@ jobs:
         with:
           token: ${{ secrets.GH_PAT }}
           command: "site"
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          personal_token: ${{ secrets.GH_PAT }}
+          publish_dir: ./__sapper__/export
+          cname: status.wakit.ai
