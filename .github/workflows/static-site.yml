@@ -12,10 +12,7 @@ jobs:
           token: ${{ secrets.GH_PAT }}
       - uses: upptime/uptime-monitor@v1.41.3
         with:
-          token: ${{ secrets.GH_PAT }}
           command: "site"
-      - uses: peaceiris/actions-gh-pages@v4
-        with:
-          personal_token: ${{ secrets.GH_PAT }}
-          publish_dir: ./__sapper__/export
-          cname: status.wakit.ai
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}

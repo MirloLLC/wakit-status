@@ -11,5 +11,6 @@ jobs:
         with:
           token: ${{ secrets.GH_PAT }}
       - uses: upptime/uptime-monitor@v1.41.3
-        with:
-          token: ${{ secrets.GH_PAT }}
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
