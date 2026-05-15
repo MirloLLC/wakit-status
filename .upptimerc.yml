@@ -25,6 +25,7 @@ sites:
 
 status-website:
   cname: status.wakit.ai
+  logoUrl: https://app.wakit.ai/favicon.svg
   name: wakit status
   introTitle: "**wakit** platform status"
   introMessage: Current status and uptime for wakit services. [Learn more about wakit](https://wakit.ai).
@@ -38,6 +39,21 @@ status-website:
     - title: GitHub
       href: https://github.com/MirloLLC/wakit-status
   theme: light
+  css: |
+    :root {
+      --font-family: 'Geist', -apple-system, sans-serif;
+      --body-background-color: #FAF7F2;
+      --body-color: #1F262C;
+      --nav-background-color: #1F262C;
+      --nav-color: #FAF7F2;
+      --status-up-color: #22c55e;
+      --status-down-color: #ef4444;
+      --link-color: #1F262C;
+    }
+    body { font-family: var(--font-family); }
+    nav { background: #1F262C !important; }
+    nav a { color: #FAF7F2 !important; }
+    .main-header h1 { font-weight: 800; letter-spacing: -0.05em; }
 
 workflowSchedule:
   graphs: "0 0 * * *"
