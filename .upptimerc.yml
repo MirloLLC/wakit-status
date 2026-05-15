@@ -35,9 +35,7 @@ status-website:
     - title: Dashboard
       href: https://app.wakit.ai
     - title: Docs
-      href: https://docs.wakit.ai
-    - title: GitHub
-      href: https://github.com/MirloLLC/wakit-status
+      href: https://docs.wakit.ai/docs
   theme: light
   css: |
     :root {
