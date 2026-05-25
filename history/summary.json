@@ -22,18 +22,20 @@
     "url": "https://api.wakit.ai/functions/v1/api/ping",
     "icon": "https://app.wakit.ai/favicon.svg",
     "slug": "api",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.98%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 540,
-    "timeDay": 583,
-    "timeWeek": 571,
-    "timeMonth": 540,
-    "timeYear": 540,
-    "dailyMinutesDown": {}
+    "time": 507,
+    "timeDay": 364,
+    "timeWeek": 518,
+    "timeMonth": 507,
+    "timeYear": 507,
+    "dailyMinutesDown": {
+      "2026-05-25": 0
+    }
   },
   {
     "name": "Auth",
