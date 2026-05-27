@@ -1,7 +1,7 @@
 url: https://api.wakit.ai/functions/v1/api/ping
-status: down
-code: 401
-responseTime: 173
-lastUpdated: 2026-05-26T23:25:43.472Z
+status: up
+code: 200
+responseTime: 1005
+lastUpdated: 2026-05-27T16:29:06.385Z
 startTime: 2026-05-15T14:56:25.790Z
 generator: Upptime <https://github.com/upptime/upptime>
